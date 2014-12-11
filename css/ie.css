@@ -1,0 +1,30 @@
+/*
+	Template Name: Frontlabs
+	Theme URI: http://frontlabs.pl
+	
+	Author: FrontLabs
+	Author URI: http://frontlabs.pl
+	Author Contact: kontakt@frontlabs.pl
+	
+	For LT IE9.
+	We're using HEADJS.com classes.
+
+*/
+/* FONT_FACE mixin */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+body {
+  direction: ltr;
+  text-align: left;
+}
+body a:hover {
+  text-decoration: none;
+}

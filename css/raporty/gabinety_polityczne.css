@@ -1,0 +1,287 @@
+@import "http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin,latin-ext";
+
+.desaturate {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: url(/#greyscale);
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+body {
+  background-color: #000000;
+}
+.gabinety-polityczne {
+  background: url(http://epf.org.pl/img/raporty/gabinety_polityczne/background.jpg) no-repeat center 110px fixed;
+  font-family: 'Roboto Condensed',sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://epf.org.pl/img/raporty/gabinety_polityczne/background.jpg',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://epf.org.pl/img/raporty/gabinety_polityczne/background.jpg', sizingMethod='scale')";*/
+}
+.gabinety-polityczne .slider {
+  display: inline-block;
+  min-height: 1075px;
+  padding: 0 0 40px 0;
+}
+.gabinety-polityczne .slider .inner {
+  float: left;
+  min-height: 1px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.gabinety-polityczne .slider .inner .title {
+  border-top: 5px solid #009de0;
+  border-bottom: 5px solid #009de0;
+  margin-bottom: 30px;
+  padding: 30px 0 40px;
+  width: auto;
+  display: inline-block;
+}
+.gabinety-polityczne .slider .inner .title > small {
+  color: #009de0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.gabinety-polityczne .slider .inner .title > h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 80px;
+  white-space: nowrap;
+}
+.gabinety-polityczne .slider .inner .subtitle {
+  margin-bottom: 20px;
+}
+.gabinety-polityczne .slider .inner .subtitle > h3 {
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  border-bottom: 5px solid #009de0;
+}
+.gabinety-polityczne .slider .inner .content {
+  font-size: 18px;
+  color: #ffffff;
+  padding: 0;
+  float: left;
+}
+.gabinety-polityczne .slider .inner .content > p,
+.gabinety-polityczne .slider .inner .content > ul {
+  padding-bottom: 10px;
+}
+.gabinety-polityczne .slider.intro .inner {
+  margin-top: 6%;
+}
+.gabinety-polityczne .slider.intro .inner .content {
+  margin-bottom: 150px;
+}
+.gabinety-polityczne .slider.przegladaj .sorting {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.gabinety-polityczne .slider.przegladaj .sorting .btn {
+  color: #FFFFFF;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide {
+  position: relative;
+  float: left;
+  width: 100%;
+  display: block;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .options {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .options .opt {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .head {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  float: left;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(100,100,100,0.5);
+  padding: 15px 135px 15px 30px;
+  margin: 0;
+  outline: 0;
+  border-top: 1px solid #000000;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .head:before {
+  content: '►';
+  font-size: 16px;
+  left: 8px;
+  position: absolute;
+  top: 30px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .head.open:before {
+  content: '▼';
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .brak {
+  color: #ffffff;
+  display: block;
+  font-size: 24px;
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list {
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: rgba(0,0,0,0.4);
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point {
+  width: 30.4%;
+  margin: 0.5% 1.5% 2.5%;
+  position: relative;
+  float: left;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point:nth-child(3n-2) {
+  margin-left: 1.3%;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox {
+  background: #006599;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > div,
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > button,
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > h4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > h4 {
+  padding-top: 10px;
+  margin-bottom: 8px;
+  line-height: 1em;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > div.info {
+  padding-bottom: 40px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox > div.info > p {
+  font-weight: normal;
+  line-height: 1.1em;
+  margin-bottom: 8px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox.flipped .reverted {
+  padding: 15px;
+  height: 100%;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox.flipped .reverted .infoLabel {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  padding-bottom: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox.flipped .reverted .infoList {
+  height: 65%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox.flipped .reverted .infoList > p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.1em;
+  padding-left: 10px;
+  margin-bottom: 6px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .flipbox.flipped .reverted .infoList > p:before {
+  content: '-';
+  padding-right: 5px;
+  margin-left: -10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point h4 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .info {
+  float: left;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .btn {
+  position: absolute;
+  bottom: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .btn.doswiadczenie {
+  right: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .btn.krs {
+  left: 10px;
+}
+.gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point .reverse {
+  display: none;
+}
+.gabinety-polityczne .slider.publikowanie .inner {
+  background-color: rgba(0,0,0,0.6);
+}
+.gabinety-polityczne .slider.publikowanie .inner .table tr {
+  border-top: 1px solid #ddd;
+}
+.gabinety-polityczne .slider.publikowanie .inner .table tr td {
+  border-top-width: 0;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList {
+  position: relative;
+  display: block;
+  height: 40px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -12px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon > img {
+  width: 80%;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon.www {
+  left: 60px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon.doc {
+  left: 100px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon.pdf.hand {
+  left: 140px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon.pdf.machine {
+  left: 180px;
+}
+.gabinety-polityczne .slider.publikowanie .inner .iconList .icon .tooltip {
+  width: 120px;
+}
+@media (max-width: 1550px) {
+  .gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point {
+    width: 47%;
+  }
+  .gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point:nth-child(3n-2) {
+    margin-left: 1.5%;
+  }
+  .gabinety-polityczne .slider.przegladaj .ministerstwa .slide .list .point:nth-child(odd) {
+    margin-left: 1.3%;
+  }
+}
