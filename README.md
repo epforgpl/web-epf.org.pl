@@ -33,4 +33,4 @@ Wordpress pluginy:
 - Regenerate Thumbnails 2.2.4
 
 `wp-includes/class-phpmailer.php`:
-`public $Sender = '"Fundacje ePaństwo<mailer@epf.org.pl>"';`
+`public $Sender = '"Fundacje ePaństwo"<mailer@epf.org.pl>';`
