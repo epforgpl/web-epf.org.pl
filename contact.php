@@ -32,7 +32,7 @@ Template Name: Contact
 	<div class="row newsletter">
 		<div class="container">
 			<div class="col-md-12">
-				<h3>Chcesz być na bierząco z działalnością fundacji?<br>
+				<h3>Chcesz być na bieżąco z działalnością fundacji?<br>
 				Zapisz się na newsletter!</h3>
 				<?php the_field('madmini'); ?>
 				
