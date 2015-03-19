@@ -22,6 +22,7 @@ Template Name: About
 				<li><a href="#rada">Rada fundacji</a></li>
 				<li><a href="#partnerzy">Partnerzy</a></li>
 				<li><a href="#statut">Statut</a></li>
+				<li><a href="http://dev.epf.org.pl/pl/prasa-o-nas/">Prasa o nas</a></li>
 				<li><a href="#sprawozdania">Sprawozdania</a></li>
 			</ul>
 			<div class="col-md-12">

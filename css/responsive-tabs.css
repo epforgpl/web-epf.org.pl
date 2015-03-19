@@ -1,0 +1,47 @@
+.r-tabs .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+    float:right;
+    margin-top:30px;
+    margin-bottom:56px
+}
+.r-tabs .r-tabs-nav li {
+    margin-left:20px;
+}
+.r-tabs .r-tabs-nav li a{
+    color:#00659d;
+    font-weight:bold;
+}
+.r-tabs .r-tabs-nav li a:hover{
+    color:#009fe3;
+}
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+
+.r-tabs .r-tabs-panel {
+    display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+    display: block;
+}
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+    .r-tabs .r-tabs-nav {
+        display: none;
+    }
+
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
+    }
+}
+
+

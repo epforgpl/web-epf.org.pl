@@ -29,6 +29,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
 	<script>window.head || document.write("<script src='js/lib/head.js'>\x3C/script>");</script>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css?ver=2" media="screen">
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/fav.ico" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
 	<script src="<?php echo get_template_directory_uri(); ?>/js/ie/html5shiv.js"></script>

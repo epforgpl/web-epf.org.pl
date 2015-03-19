@@ -1,4 +1,25 @@
 <?php
+// Apply filter
+add_filter('body_class', 'multisite_body_classes');
+
+function multisite_body_classes($classes) {
+        $id = get_current_blog_id();
+        $slug = strtolower(str_replace(' ', '-', trim(get_bloginfo('name'))));
+        $classes[] = $slug;
+        $classes[] = 'site-id-'.$id;
+        return $classes;
+}
+function first_post_image()
+{
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    if (preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches)) {
+        $first_img = $matches[1][0];
+        return $first_img;
+    }
+}
 // Ukrywanie paska admina
 add_filter( 'show_admin_bar', '__return_false' );
 
@@ -27,6 +48,28 @@ function first_paragraph($content) {
 	return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
 }
 add_filter('the_content', 'first_paragraph');
+
+ 
+ 
+// Parent Function that makes the magic happen
+ 
+function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+    $closing_p = '</p>';
+    $paragraphs = explode( $closing_p, $content );
+    foreach ($paragraphs as $index => $paragraph) {
+
+        if ( trim( $paragraph ) ) {
+            $paragraphs[$index] .= $closing_p;
+        }
+
+        if ( $paragraph_id == $index + 1 ) {
+            $paragraphs[$index] .= $insertion;
+        }
+    }
+    
+    return implode( '', $paragraphs );
+}
+
 
 
 // Skracanie wstępu na blogu
@@ -113,4 +156,19 @@ function shiba_remove_rewrite_rules($permastruct, $ep_mask=EP_NONE) {
     }
     update_option('rewrite_rules', $rules);
 }
-?>
+function generatePagination($paged, $loop)
+{
+    $big = 999999999; // need an unlikely integer
+
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => max(1, $paged),
+        'total' => $loop->max_num_pages,
+        'prev_text' => '«',
+        'next_text' => '»',
+        'type' => 'list'
+    ));
+}
+
+

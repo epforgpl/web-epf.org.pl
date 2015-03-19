@@ -41,11 +41,11 @@ if( have_rows('persons') ):
 		
 		<?php if(get_field('join')){ ?>
 			<div class="team-hire">
-				<h2 class="team-hire-title">Dołącz do nas</h2>
+				<h2 class="team-hire-title"><?php echo __('Dołącz do nas')?></h2>
 				<p>
-					Jesteśmy pasjonatami otwartego rządu i wykorzystywania nowych technologii do tworzenia społeczeństwa obywatelskiego. <strong>Myślisz w podobny sposób?</strong>
+					<?php echo __('Jesteśmy pasjonatami otwartego rządu i wykorzystywania nowych technologii do tworzenia społeczeństwa obywatelskiego. <strong>Myślisz w podobny sposób?</strong>')?>
 				</p>
-				<a href="mailto:<?php the_field('mailto'); ?>" class="team-hire-link">Napisz do nas <i>&rarr;</i></a>
+				<a href="mailto:<?php the_field('mailto'); ?>" class="team-hire-link"><?php echo __('Napisz do nas')?> <i>&rarr;</i></a>
 			</div>
 		<?php } ?>
 	</div>

@@ -1,12 +1,22 @@
 <?php get_header('blog'); ?>
 
 
-<div class="posts-list">
-	<div class="container" id="container">
-<?php $loop = new WP_Query(array('paged' => $paged, 'cat' => get_query_var('cat'))); ?>
-		<?php if ( have_posts() ) :  ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-						<div class="item">
+    <div class="posts-list">
+        <div id="author_outside">
+            <div class="container">
+                <h3><?php $authordata = get_userdata($post->post_author); echo $authordata->display_name; ?></h3>
+                <div id="athor_bio">
+<p><?php $authordata = get_userdata($post->post_author); echo $authordata->description; ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="container">
+            <?php $author_id = get_the_author_meta( 'ID' );?>
+            
+            <?php $loop = new WP_Query(array('author'=> $author_id, 'paged' => $paged)); ?>
+            <?php if ($loop->have_posts()) : ?>
+                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                    <div class="item">
                         <article class="post post--listed">
                             <div class="post-basic">
 
@@ -32,11 +42,12 @@
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
-                <h2>Brak postów</h2>
+                <h2><?php echo __('Brak postów')?></h2>
             <?php endif; ?>
         </div>
-<div class="pagination">
+        <div class="pagination">
             <?php generatePagination(get_query_var('paged'), $loop); ?>
         </div>
     </div>
+
 <?php get_footer(); ?>

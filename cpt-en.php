@@ -43,8 +43,8 @@ add_action( 'init', 'register_cpt_raports' );
 function register_cpt_raports() {
 
 	$labels = array(
-	'name' => _x( 'Raports', 'raports' ),
-	'singular_name' => _x( 'Raports', 'raports' ),
+	'name' => _x( 'Reports', 'reports' ),
+	'singular_name' => _x( 'Reports', 'reports' ),
 	'add_new' => _x( 'Add New', 'raports' ),
 	'add_new_item' => _x( 'Add New Raports', 'raports' ),
 	'edit_item' => _x( 'Edit Raports', 'raports' ),
@@ -70,11 +70,63 @@ function register_cpt_raports() {
 	'has_archive' => true,
 	'query_var' => true,
 	'can_export' => true,
-	'rewrite' => array( 'slug' => 'raports' ),
+	'rewrite' => array( 'slug' => 'reports' ),
 	'capability_type' => 'post'
 	);
 
 	register_post_type( 'Raports', $args );
 	}
+
+
+    $labels = array(
+        'name'               => 'Events',
+        'singular_name'      => 'Event',
+        'menu_name'          => 'events',
+        'name_admin_bar'     => 'Event',
+        'add_new'            => 'Dodaj nowy',
+        'add_new_item'       => 'Dodaj nowy event',
+        'new_item'           => 'Nowy event',
+        'edit_item'          => 'Edytuj event',
+        'view_item'          => 'Zobacz eventy',
+        'all_items'          => 'Wszystkie eventy',
+        'search_items'       => 'Szukaj eventu',
+        'parent_item_colon'  => 'Rodzic eventu:',
+        'not_found'          => 'Nie znaleziono eventu.',
+        'not_found_in_trash' => 'Nie znaleziono eventu w koszu.',
+    );
+    
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'events' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-star-half',
+        'supports'           => array( 'title','author', 'thumbnail' ),
+        'taxonomies'         => array( 'category', 'post_tag' )
+    );
+    register_post_type( 'event', $args );
+    
+    // Custom Taxonomies
+function my_custom_taxonomies() {
+    register_taxonomy(
+        'Kategoria eventów',
+        'event',
+        array(
+            'label' => __( 'Kategoria eventów' ),
+            'rewrite' => array( 'slug' => 'event-kategora' ),
+            'hierarchical' => true,
+        )
+    );
+        
+}
+
+add_action( 'init', 'my_custom_taxonomies' );
 
 ?>
