@@ -4121,6 +4121,7 @@ body a:hover {
   position: relative;
   z-index: 3;
   float: left;
+  line-height: 1.35em;
 }
 .team-person-details:before {
   content: ' ';
