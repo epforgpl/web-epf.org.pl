@@ -6268,3 +6268,35 @@ main#content .container img {
 .en-section a#zarejestruj:hover {
     background: url("../images/arrow_white.png") no-repeat scroll 163px center #00659d;
 }
+.technologia #tabs_content {
+
+    max-width: 740px;
+}
+.technologia #tabs_sidebar img{
+    max-width:240px;
+    height:auto;
+}
+
+.technologia h3{
+    color: #009fe3;
+    margin-top:0px;
+}
+.technologia .text {
+    padding-top:57px;
+}
+.technologia .project-head {
+    bottom: 40%;
+}
+
+
+#event_polecane_eventy .homeWhite-btn {
+    position: absolute;
+    right: 0;
+    bottom:0px;
+}
+a.pdf {
+    clear: both;
+    float: left;
+    margin-top: 65px;
+    font-weight:bold;
+}

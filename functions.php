@@ -170,5 +170,9 @@ function generatePagination($paged, $loop)
         'type' => 'list'
     ));
 }
-
-
+add_filter('single_template', 'my_single_template');
+function my_single_template($single) {
+    if(file_exists(get_template_directory() . '/single-' . get_the_ID() . '.php'))
+        return get_template_directory() . '/single-' . get_the_ID() . '.php';
+    return $single;
+}
