@@ -38,8 +38,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/blog.css" media="screen">
     <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-tabs.css" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/fav.ico" />
-            <script src="http://www.test.pe2.pl/1/jquery-2.1.0.min.js"></script>
-    <script src="http://www.test.pe2.pl/1/jquery.responsiveTabs.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.responsiveTabs.min.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
