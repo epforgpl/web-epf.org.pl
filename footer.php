@@ -19,7 +19,7 @@
 	<ul class="footer-social">
 		<li><a target="_blank" href="https://www.youtube.com/user/epanstwo" class="footer-social-icon icon--youtube"></a></li>
 		<li><a target="_blank" href="https://www.facebook.com/epanstwo" class="footer-social-icon icon--facebook"></a></li>
-		<li><a target="_blank" href="https://twitter.com/ePForgpl" class="footer-social-icon icon--twitter"></a></li>
+		<li><a target="_blank" href="https://twitter.com/fundament_ngo" class="footer-social-icon icon--twitter"></a></li>
 	</ul>
 </div>
 </footer>
