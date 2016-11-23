@@ -39,6 +39,7 @@
 </head>
 
 <body <?php body_class()?>>
+<script type="text/javascript" src="https://blackout.mojepanstwo.pl/blackout.js"></script>
 <div class="wrap">
 	<nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
 	<div class="navbar-container container">

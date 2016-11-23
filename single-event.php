@@ -59,7 +59,14 @@ if (!empty($image)): ?>
                 <?php if (get_field('kontakt')) {
                     echo '<li><a href="#kontakt">' . __('Kontakt') . '</a></li>';
                 } ?>
+		<?php if (get_field('Regulamin')) {
+                    echo '<li><a href="#regulamin">' . __('Regulamin') . '</a></li>';
+                } ?>
+		<?php if (get_field('Travel_Granty_dla_NGO')) {
+                    echo '<li><a href="#travel_grants">' . __('Travel Granty dla NGO') . '</a></li>';
+                } ?>
             </ul>
+
             <?php $value = get_field("zarejestruj_sie");
             if ($value) { ?> <a href="<?php echo $value ?>"
                                 id="zarejestruj"><?php echo __('Zarejestruj się') ?>  </a><?php } ?>
@@ -144,7 +151,17 @@ if (!empty($image)): ?>
                     the_field('kontakt');
                     echo '</div>';
                 } ?>
-                <?php if (have_rows('speakers')) {
+                <?php if (get_field('Regulamin')) {
+                    echo '<div id="regulamin"><h2>' . __('Regulamin') . '</h2>';
+                    the_field('Regulamin');
+                    echo '</div>';
+                } ?>
+		<?php if (get_field('Travel_Granty_dla_NGO')) {
+                    echo '<div id="travel_grants"><h2>' . __('Travel Granty dla NGO') . '</h2>';
+                    the_field('Travel_Granty_dla_NGO');
+                    echo '</div>';
+                } ?>                
+		<?php if (have_rows('speakers')) {
                     echo '<div id="prelegenci">
                     <h2>' . __('Prelegenci') . '</h2>';
                     echo '<ul class="speakers">';
@@ -219,6 +236,20 @@ if (!empty($image)): ?>
                     echo '</div>';
                 } ?>
 
+		<?php if (have_rows('logotypy_wspolorganizatorow')) {
+                    echo '<div id="event_wspolorganizatorzy_images"><h3>' . __('Współorganizatorzy') . '</h3>';
+                    while (have_rows('logotypy_wspolorganizatorow')) : the_row(); ?>
+                        <?php $value = get_sub_field("link_logotypu");
+                        if ($value) { ?><a href="<?php echo $value; ?>"><img
+                                src="<?php the_sub_field('logotyp_organizatora'); ?> "></a> <?php } else {
+                            ?>
+                            <img src="<?php the_sub_field('logotyp_organizatora'); ?> ">
+                            <?php
+                        }
+                    endwhile;
+                    echo '</div>';
+                } ?>
+
 
                 <?php if (have_rows('sponsorzy_logotypy')) {
                     echo '<div id="event_sponsorzy_images"><h3>' . __('Sponsorzy') . '</h3>';
@@ -230,7 +261,6 @@ if (!empty($image)): ?>
 
                         if ($value) { ?><a href="<?php echo $value; ?>"><img
                                 src="<?php the_sub_field('logotyp_sponsora'); ?> "></a> <?php } else {
-
                             ?>
                             <img src="<?php the_sub_field('logotyp_sponsora'); ?> ">
                             <?php
@@ -248,7 +278,6 @@ if (!empty($image)): ?>
 
                         if ($value) { ?><span><a href="<?php echo $value; ?>"><img
                                     src="<?php the_sub_field('logotyp_partnera'); ?> "></a></span> <?php } else {
-
                             ?>
                             <span><img src="<?php the_sub_field('logotyp_partnera'); ?> "></span>
                             <?php
@@ -268,7 +297,6 @@ if (!empty($image)): ?>
                         if ($value) { ?><span><a href="<?php echo $value; ?>"><img
                                     src="<?php the_sub_field('patroni_medialni_logotypy'); ?> "></a>
                             </span> <?php } else {
-
                             ?>
                             <span><img src="<?php the_sub_field('patroni_medialni_logotypy'); ?> "></span>
                             <?php

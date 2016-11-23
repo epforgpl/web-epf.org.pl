@@ -5866,15 +5866,16 @@ h1.projects-single-h a{
     color:#009fe3;
 }
 
-#event_organizatorzy_images img {
+#event_organizatorzy_images img,
+#event_wspolorganizatorzy_images img {
     clear: both;
     margin-bottom: 35px;
     max-width: 200px;
 }
-#event_patroni_medialni_images, #event_partnerzy_images, #event_sponsorzy_images, #event_organizatorzy_images{
+#event_patroni_medialni_images, #event_partnerzy_images, #event_sponsorzy_images, #event_organizatorzy_images,#event_wspolorganizatorzy_images{
     clear:both;
 }
-#event_patroni_medialni_images h3, #event_partnerzy_images h3, #event_sponsorzy_images h3, #event_organizatorzy_images h3, #event_data h3{
+#event_patroni_medialni_images h3, #event_partnerzy_images h3, #event_sponsorzy_images h3, #event_organizatorzy_images h3, #event_wspolorganizatorzy_images h3, #event_data h3{
 color: #009fe3;  
 }
 
