@@ -34,7 +34,9 @@ if (!empty($image)): ?>
             </div>
         </div>
     </div>
+    
     <div class="container" id="container_tabs">
+        
         <div id="horizontalTab">
             <ul>
                 <?php if (get_field('o_evencie')) {
@@ -59,67 +61,78 @@ if (!empty($image)): ?>
                 <?php if (get_field('kontakt')) {
                     echo '<li><a href="#kontakt">' . __('Kontakt') . '</a></li>';
                 } ?>
-		<?php if (get_field('Regulamin')) {
+				<?php if (get_field('Regulamin')) {
                     echo '<li><a href="#regulamin">' . __('Regulamin') . '</a></li>';
                 } ?>
-		<?php if (get_field('Travel_Granty_dla_NGO')) {
+				<?php if (get_field('Travel_Granty_dla_NGO')) {
                     echo '<li><a href="#travel_grants">' . __('Travel Granty dla NGO') . '</a></li>';
                 } ?>
             </ul>
-            <?php $value = get_field("zarejestruj_sie");
-            if ($value) { ?> <a href="<?php echo $value ?>"
-                                id="zarejestruj"><?php echo __('Zarejestruj się') ?>  </a><?php } ?>
+            
+            <?php if( $value = get_field("zarejestruj_sie") ) { ?>
+            	<a href="<?php echo $value ?>" id="zarejestruj"><?php echo __('Zarejestruj się') ?>  </a>
+            <?php } ?>
+            
             <div id="tabs_content">
+                
                 <?php if (get_field('o_evencie')) {
                     echo '<div id="o_evencie"><h2>' . __('O wydarzeniu') . '</h2>';
                     the_field('o_evencie');
-                    if (have_rows('speakers')) {
-                        echo '<div id="prelegaci2"><h2>' . __('Wystąpią') . '</h2>';
-                        echo '<ul class="speakers">';
-                        while (have_rows('speakers')) : the_row(); ?>
-                            <?php
-                            // display a sub field value
-                            echo '<li>'; ?>
-                            <figure><?php
-                                $image = get_sub_field('speakers_photo');
-                                if (!empty($image)):
-
-                                    // vars
-                                    $url = $image['url'];
-                                    $title = $image['title'];
-                                    $alt = $image['alt'];
-                                    $caption = $image['caption'];
-
-                                    // thumbnail
-                                    $size = 'thumbnail';
-                                    $thumb = $image['sizes'][$size];
-                                    $width = $image['sizes'][$size . '-width'];
-                                    $height = $image['sizes'][$size . '-height'];
-
-                                    if ($caption): ?>
-
-                                        <div class="wp-caption"><?php endif; ?>
-                                    <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"
-                                         width="<?php echo $width; ?>" height="<?php echo $height; ?>"/>
-                                    <?php if ($caption): ?>
-                                    </div>
-                                <?php endif; ?>
-                                <?php endif; ?>
-                            </figure>
-                            <h4 class="name a"><?php if (get_sub_field('youtube_link')): ?><a
-                                    href="<?php the_sub_field('youtube_link'); ?>"
-                                    target="_blank"><?php endif; ?><?php the_sub_field('speakers_name'); ?>
-                                    <?php if (get_sub_field('youtube_link')): ?></a><?php endif; ?>
-                            </h4>
-                            <h4 class="name"><i><?php the_sub_field('tytul_prelegenta'); ?></i></h4>
-
-                            <?php echo '</li>';
-                        endwhile;
-                        echo '</ul>';
-                        echo '</div>';
-                    } ?>
-                    <?php echo '</div>';
+                    echo '</div>';
                 } ?>
+                
+                <?php if (have_rows('speakers')) {
+            
+                    echo '<div id="prelegaci2"><h2>' . __('Wystąpią') . '</h2>';
+                    echo '<ul class="speakers">';
+            
+                    while (have_rows('speakers')) : the_row(); ?>
+                        <?php
+                        // display a sub field value
+                        echo '<li>'; ?>
+                        
+                        <figure><?php
+                            $image = get_sub_field('speakers_photo');
+                            if (!empty($image)):
+
+                                // vars
+                                $url = $image['url'];
+                                $title = $image['title'];
+                                $alt = $image['alt'];
+                                $caption = $image['caption'];
+
+                                // thumbnail
+                                $size = 'thumbnail';
+                                $thumb = $image['sizes'][$size];
+                                $width = $image['sizes'][$size . '-width'];
+                                $height = $image['sizes'][$size . '-height'];
+
+                                if ($caption): ?>
+
+                                    <div class="wp-caption"><?php endif; ?>
+                                <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"
+                                     width="<?php echo $width; ?>" height="<?php echo $height; ?>"/>
+                                <?php if ($caption): ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php endif; ?>
+                        </figure>
+                        
+                        <h4 class="name a"><?php if (get_sub_field('youtube_link')): ?><a
+                                href="<?php the_sub_field('youtube_link'); ?>"
+                                target="_blank"><?php endif; ?><?php the_sub_field('speakers_name'); ?>
+                                <?php if (get_sub_field('youtube_link')): ?></a><?php endif; ?>
+                        </h4>
+                        <h4 class="name"><i><?php the_sub_field('tytul_prelegenta'); ?></i></h4>
+
+                        <?php echo '</li>';
+                    endwhile;
+                    
+                    echo '</ul>';
+                    echo '</div>';
+                    } ?>
+                <?php } ?>
+                
                 <?php if (have_rows('program')) {
                     echo '<div id="program"><h2>' . __('Program') . '</h2><ul>';
 
@@ -140,27 +153,32 @@ if (!empty($image)): ?>
 
                     echo '</ul></div>';
                 } ?>
+                
                 <?php if (get_field('dojazd')) {
                     echo '<div id="dojazd"><h2>' . __('Dojazd') . '</h2>';
                     the_field('dojazd');
                     echo '</div>';
                 } ?>
+                
                 <?php if (get_field('kontakt')) {
                     echo '<div id="kontakt"><h2>' . __('Kontakt') . '</h2>';
                     the_field('kontakt');
                     echo '</div>';
                 } ?>
+                
                 <?php if (get_field('Regulamin')) {
                     echo '<div id="regulamin"><h2>' . __('Regulamin') . '</h2>';
                     the_field('Regulamin');
                     echo '</div>';
                 } ?>
-		<?php if (get_field('Travel_Granty_dla_NGO')) {
+                
+				<?php if (get_field('Travel_Granty_dla_NGO')) {
                     echo '<div id="travel_grants"><h2>' . __('Travel Granty dla NGO') . '</h2>';
                     the_field('Travel_Granty_dla_NGO');
                     echo '</div>';
-                } ?>                
-		<?php if (have_rows('speakers')) {
+                } ?>
+                
+				<?php if (have_rows('speakers')) {
                     echo '<div id="prelegenci">
                     <h2>' . __('Prelegenci') . '</h2>';
                     echo '<ul class="speakers">';
@@ -213,12 +231,14 @@ if (!empty($image)): ?>
                     the_field('nagrania');
                     echo '</div>';
                 } ?>
+                
                 <?php if (get_field('sponsorzy_i_partnerzy')) {
                     echo '<div id="sponsorzy_i_partnerzy"><h2>' . __('Sponsorzy i partnerzy') . '</h2>';
                     the_field('sponsorzy_i_partnerzy');
                     '</div>';
                 } ?>
             </div>
+            
             <div id="tabs_sidebar">
 
                 <?php if (have_rows('logotypy_organizatorow')) {
@@ -294,7 +314,9 @@ if (!empty($image)): ?>
         </div>
 
     </div>
+    
     <div id="event_footer">
+        
         <div id="event_6_featured_posts">
             <div class="posts-list">
                 <div class="container" id="container">
@@ -330,12 +352,7 @@ if (!empty($image)): ?>
                             </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                    <?php endif;
-
-
-                    ?>
-
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -371,12 +388,7 @@ if (!empty($image)): ?>
                             </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                    <?php endif;
-
-
-                    ?>
-
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -408,15 +420,11 @@ if (!empty($image)): ?>
                             </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                    <?php endif;
-
-
-                    ?>
-
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
+        
         <div id="event_polecane_eventy">
             <div class="posts-list">
                 <div class="container">
@@ -444,15 +452,11 @@ if (!empty($image)): ?>
                             </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                    <?php endif;
-
-
-                    ?>
-
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
+        
     </div>
 
 <?php get_footer(); ?>
