@@ -130,7 +130,7 @@ if (!empty($image)): ?>
                     
                     echo '</ul>';
                     echo '</div>';
-                <?php } ?>
+                } ?>
                 
                 <?php if (have_rows('program')) {
                     echo '<div id="program"><h2>' . __('Program') . '</h2><ul>';
