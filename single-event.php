@@ -49,7 +49,7 @@ if (!empty($image)): ?>
                     echo ' <li><a href="#dojazd">' . __('Dojazd') . '</a></li>';
                 } ?>
 		<?php if (get_field('visegrad')) {
-                    echo '<li><a href="#visegrad">' . __('Projekt wyszehradzki') . '</a></li>';
+                    echo '<li><a href="#visegrad">' . __('Visegrad project') . '</a></li>';
                 } ?>
                 <?php if (have_rows('speakers')) {
                     echo '<li><a href="#prelegenci">' . __('Prelegenci') . '</a></li>';
@@ -134,6 +134,12 @@ if (!empty($image)): ?>
                     echo '</div>';
                 } ?>
                 
+		<?php if (get_field('visegrad')) {
+                    echo '<div id="visegrad"><h2>' . __('Visegrad project') . '</h2>';
+                    the_field('visegrad');
+                    echo '</div>';
+                } ?>
+		    
                 <?php if (have_rows('program')) {
                     echo '<div id="program"><h2>' . __('Program') . '</h2><ul>';
 
