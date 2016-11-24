@@ -66,7 +66,6 @@ if (!empty($image)): ?>
                     echo '<li><a href="#travel_grants">' . __('Travel Granty dla NGO') . '</a></li>';
                 } ?>
             </ul>
-
             <?php $value = get_field("zarejestruj_sie");
             if ($value) { ?> <a href="<?php echo $value ?>"
                                 id="zarejestruj"><?php echo __('Zarejestruj się') ?>  </a><?php } ?>
@@ -236,21 +235,6 @@ if (!empty($image)): ?>
                     echo '</div>';
                 } ?>
 
-		<?php if (have_rows('logotypy_wspolorganizatorow')) {
-                    echo '<div id="event_wspolorganizatorzy_images"><h3>' . __('Współorganizatorzy') . '</h3>';
-                    while (have_rows('logotypy_wspolorganizatorow')) : the_row(); ?>
-                        <?php $value = get_sub_field("link_logotypu");
-                        if ($value) { ?><a href="<?php echo $value; ?>"><img
-                                src="<?php the_sub_field('logotyp_organizatora'); ?> "></a> <?php } else {
-                            ?>
-                            <img src="<?php the_sub_field('logotyp_organizatora'); ?> ">
-                            <?php
-                        }
-                    endwhile;
-                    echo '</div>';
-                } ?>
-
-
                 <?php if (have_rows('sponsorzy_logotypy')) {
                     echo '<div id="event_sponsorzy_images"><h3>' . __('Sponsorzy') . '</h3>';
                     while (have_rows('sponsorzy_logotypy')) : the_row();
@@ -383,6 +367,43 @@ if (!empty($image)): ?>
 
 
                                 </article>
+                                <!-- / .post--listed -->
+                            </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                    <?php endif;
+
+
+                    ?>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="event_polecane_eventy">
+            <div class="posts-list">
+                <div class="container">
+                    <h2><?php echo __('Inne nasze wydarzenia') ?></h2>
+                    <?php
+                    $post_objects = get_field('3_polecane_eventy');
+                    if ($post_objects): ?>
+                        <?php foreach ($post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                            <?php setup_postdata($post); ?>
+                            <div class="item" style="background-image: url('<?php the_field('zdjecie'); ?>')">
+                                <?php $image = get_field('logo_eventu');
+                                if (!empty($image)): ?>
+
+                                    <img class="logo_event" src="<?php echo $image ?>" alt="<?php the_title(); ?>"/>
+
+                                <?php endif; ?>
+
+                                <h3> <?php the_title(); ?> </h3>
+
+                                <p> <?php if (get_field('krotki_opis')) {
+                                        echo the_field('krotki_opis');
+                                    } ?></p>
+                                <a class="wiecej" href="<?php the_permalink(); ?>"><?php echo __('więcej') ?> </a>
                                 <!-- / .post--listed -->
                             </div>
                         <?php endforeach; ?>
