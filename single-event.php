@@ -130,7 +130,6 @@ if (!empty($image)): ?>
                     
                     echo '</ul>';
                     echo '</div>';
-                    } ?>
                 <?php } ?>
                 
                 <?php if (have_rows('program')) {
