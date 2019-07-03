@@ -1,6 +1,4 @@
 <?php get_header('blog'); ?>
-
-
 <div class="posts-list">
 	<div class="container" id="container">
 <?php $loop = new WP_Query(array('paged' => $paged, 'cat' => get_query_var('cat'))); ?>

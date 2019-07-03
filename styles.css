@@ -4687,7 +4687,7 @@ body a:hover {
   }
 }
 .about > .section-head {
-  background-image: url("../images/bg-about.jpg");
+  background-color: #666;
   height: 285px;
 }
 .about > .section-headline {

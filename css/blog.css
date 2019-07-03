@@ -191,6 +191,7 @@
 
 .post-photo {
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .post-photo > img {
@@ -647,5 +648,32 @@ h3#partnerzy{
 }
 
 .post h2{
-    padding: 0 20px;
+    padding: 0 0px;
+}
+
+.post ul li {
+	margin: 15px 0;
+}
+
+.post .post_images img {
+	margin: 10px;
+}
+
+.post-content {
+	--x-height-multiplier: 0.35;
+    --baseline-multiplier: 0.179;
+    font-family: "PT Serif",Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    color: #333;
+    text-align: justify !important;
+}
+
+.post-content .lead {
+	font-size: inherit;
+	font-weight: bold;
 }

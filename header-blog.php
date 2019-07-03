@@ -34,8 +34,8 @@
     </title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
     <script>window.head || document.write("<script src='js/lib/head.js'>\x3C/script>");</script>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" media="screen">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/blog.css" media="screen">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css?v=2" media="screen">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/blog.css?v=3" media="screen">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/fav.ico" />
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
@@ -47,7 +47,7 @@
 
 <body <?php body_class() ?>>
 <div class="wrap">
-    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
+    <nav class="navbar navbar-main navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
         <div class="navbar-container container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"

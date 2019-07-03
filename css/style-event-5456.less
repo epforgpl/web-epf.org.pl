@@ -1,0 +1,497 @@
+@font-face { font-family: Pier; src: url('http://epf.org.pl/en/wp-content/themes/epf/fonts/pier.otf'); } 
+
+main#content {
+	height: 530px;
+	background-position: center top;
+    background-size: 100% auto;
+    overflow: hidden;
+	
+	.container {
+		top: 0;
+	}
+	
+}
+
+.menu_event {
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 55px;
+	
+	.navbar-nav > li > a {
+		padding: 18px;
+		height: 55px;
+		color: #FFF;
+		text-transform: uppercase;
+		
+		&:hover, &:focus {
+			color: #FFF;
+			background-color: inherit;
+		}
+		
+		&.active {
+			> a, :focus, :hover > a {
+				background-color: transparent;
+				color: #ea1846;
+				font-weight: normal;
+			}
+		}
+		
+		&::after {
+			display: none;
+		}
+		
+	}
+	
+	#menu_tabs {
+		float: none;
+		height: 55px;
+		
+		.container {
+			height: 55px;
+		}
+	}
+	
+}
+
+#container_tabs {
+	margin-top: inherit;
+	
+	#tabs_content {
+	    clear: inherit;
+	    display: inherit;
+	    float: inherit;
+	    margin-bottom: inherit;
+	    margin-right: inherit;
+	    width: inherit;
+	    max-width: inherit;
+	    
+	    h2 {
+		    font-weight: 200;
+			font-size: 34px;
+			margin-bottom: 20px;
+			text-align: center;
+	    }
+	}
+
+}
+
+.row-block {
+	
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	&.first {
+		margin-top: 20px;
+	}
+	
+}
+
+.event-block-darker {
+	background-color: #F3F3F3;
+}
+
+.location_image {
+	height: 530px;
+	background-position: center top;
+    background-size: 100% auto;
+    margin-top: -30px;
+}
+
+.ul_default li {
+	margin-top: 10px;
+}
+
+.event_target {
+	padding: 40px;
+	text-align: center;
+	
+}
+
+html.cover_fixed #content {
+	position: fixed;
+	top: -360px;
+	z-index: 1;
+}
+
+html.cover_fixed #container_tabs {
+	padding-top: 471px;
+}
+
+#content.img {
+	background: url("http://epf.org.pl/en/wp-content/themes/epf/images/pdf-cog-11.svg") no-repeat scroll center 49px, url("http://epf.org.pl/en/wp-content/themes/epf/images/pdf_2017_keyart.jpg") repeat scroll center center;
+	background-blend-mode: soft-light;
+	background-size: 370px, cover;
+}
+
+#content #content-bg {
+	width: 100%;
+	height: 425px;
+	position: absolute;
+	background-color: rgba(87, 51, 149, 1);
+	overflow: hidden;
+	transition: background-color 3s linear;
+}
+
+#content.anim #content-bg {
+	background-color: rgba(87, 51, 149, 0);
+}
+
+#content .container .cog {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 280px;
+	height: 490px;
+	margin-top: -236px;
+	margin-left: -100px;	
+}
+
+#content .container .cog-1 {
+	
+	position: absolute;
+	left: 50%;
+	width: 260px;
+	height: 260px;
+	margin-left: -54px;
+    margin-top: -506px;
+	
+}
+
+#content .container .cog img {
+	margin: 0;
+	padding: 0;
+	left: inherit;
+	top: inherit;
+	position: static;
+	visibility: hidden;
+}
+
+#content.anim .container .cog img {
+	visibility: visible;
+}
+
+#content .container .text {
+	margin: 0;
+	padding: 0;
+	font-family: Pier;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	text-shadow: 1px 1px 0 #000;
+}
+
+#content .container .text.h {
+	font-size: 48px;
+	color: #FFF;
+	text-transform: uppercase;
+	opacity: 0;
+	
+}
+
+#content.anim .container .text.h {
+	animation: text-opacity 2s linear, text-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+}
+
+#content .container .text.cee {
+	color: #ea1846;
+    font-size: 28px;
+    margin-left: 200px;
+    margin-top: 118px;
+    opacity: 0;
+    width: 100%;
+}
+
+#content.anim .container .text.cee {
+	animation: text-opacity 2s linear, cee-position 8s cubic-bezier(0,1,0,1);
+    animation-fill-mode: forwards;
+    animation-delay: 1700ms;
+}
+
+#content .container .info {
+	color: #FFF;
+	font-size: 22px;
+	margin-left: 0%;
+	text-transform: uppercase;
+	opacity: 0;
+}
+
+#content.anim .container .info {
+	animation: text-opacity 2s linear;
+	animation-fill-mode: forwards;
+}
+
+#content .container .info.time {
+	margin-top: 0;
+	animation: text-opacity 2s linear;
+	animation-fill-mode: forwards;
+	animation-delay: 2900ms;
+}
+
+#content .container .info.location {
+	margin-top: 30px;
+	animation: text-opacity 2s linear;
+	animation-fill-mode: forwards;
+	animation-delay: 3400ms;
+}
+
+@keyframes text-opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes text-position {
+    from {margin-left: -40%;}
+    to {margin-left: 0%;}
+}
+
+@keyframes motto-position {
+    from {margin-left: -240px;}
+    to {margin-left: -340px;}
+}
+
+@keyframes cee-position {
+    from {margin-left: 350px; color: #FFF;}
+    to {margin-left: 200px; color: #ea1846;}
+}
+
+#content .container .text.personal {
+	margin-left: 0;
+	margin-top: 0;
+}
+
+#content.anim .container .text.personal {
+	animation: text-opacity 2s linear, text-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+	animation-delay: 1000ms;
+}
+
+#content .container .text.democracy {
+	margin-left: 0;
+	margin-top: 57px;;
+}
+
+#content.anim .container .text.democracy {
+	animation: text-opacity 2s linear, text-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+	animation-delay: 1200ms;
+}
+
+#content .container .text.forum {
+	margin-left: 0;
+	margin-top: 114px;
+	
+}
+
+#content.anim .container .text.forum {
+	animation: text-opacity 2s linear, text-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+	animation-delay: 1500ms;
+}
+
+#content .container .text.motto {
+	font-size: 46px;
+	text-transform: uppercase;
+	color: #FFF;
+	opacity: 0;
+}
+
+#content.anim .container .text.motto {
+	animation: text-opacity 2s linear, motto-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+}
+
+#content .container .text.motto.rebooting {
+	animation: text-opacity 2s linear, motto-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+	animation-delay: 2200ms;
+	margin-left: -340px;
+}
+
+#content .container .text.motto.democracy {
+	animation: text-opacity 2s linear, motto-position 8s cubic-bezier(0,1,0,1);
+	animation-fill-mode: forwards;
+	animation-delay: 2500ms;
+	margin-left: -340px;
+}
+
+.z_event_title {
+	position: absolute;
+	left: 2%;
+	top: 185px;
+	width: 100%;
+}
+
+.z_event_info {
+	position: absolute;
+	left: 2%;
+	top: 412px;
+	width: 100%;
+}
+
+.z_event_motto {
+	position: absolute;
+	left: 100%;
+	top: 365px;
+	width: 100%;
+}
+
+.z_event_cog {
+	position: absolute;
+	left: -5%;
+	top: 50%;
+	width: 100%
+}
+
+@media (max-width:767px){
+	main#content {
+		height: 450px;
+	}
+	#content #content-bg {
+		height: 450px;
+	}
+	.container.container-content-bg {
+		width: 350px;
+		height: 450px !important;
+	}
+	.z_event_title {
+		top: 100px;
+		left: -50px;
+		transform: scale(.6);
+	}
+	.z_event_cog {
+		left: -55px;
+		top: 259px;
+	}
+	.z_event_info {
+		left: -47px;
+		top: 232px;
+		transform: scale(.6);
+	}
+	.z_event_motto {
+		left: 309px;
+		top: 315px;
+		transform: scale(.9);
+	}
+	.cog {
+		margin-left: 70px !important;
+	}
+	.cog img {
+		width: 149px;
+	}
+}
+
+@media (min-width: 768px) {
+	main#content {
+		height: 370px;
+	}
+	#content #content-bg {
+		height: 370px;
+	}
+	main#content .container.container-content-bg {
+		width: 768px;
+		height: 315px;
+	}
+	.z_event_title {
+		top: 100px;
+		left: -50px;
+		transform: scale(.7);
+	}
+	.z_event_cog {
+		left: -140px;
+		top: 259px;
+	}
+	.z_event_info {
+		left: -47px;
+		top: 232px;
+		transform: scale(.7);
+	}
+	.z_event_motto {
+		left: 581px;
+		top: 197px;
+		transform: scale(.7);
+	}
+	.cog {
+		margin-left: 68px !important;
+	}
+	.cog img {
+		width: 149px;
+	}
+}
+
+
+.menu_event .navbar-default {
+	background-color: transparent;
+}
+
+.menu_event .navbar-menu_tabs .navbar-toggle {
+	border-color: #EEE;
+}
+
+.menu_event .navbar-default .navbar-toggle {
+	border-color: #FFF;
+}
+
+.menu_event .navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFF;
+}
+
+.menu_event .navbar-brand {
+	line-height: 53px;
+	padding: 0 5px;
+	height: 55px;
+}
+
+.menu_event .navbar-brand > img {
+    width: 84px;
+    position: static;
+}
+
+.menu_event .navbar-collapse {
+	float: left;
+	margin-left: 110px;
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
+}
+.menu_event.logo .navbar-collapse {
+	margin-left: 110px;
+}
+
+.menu_event .navbar-header {
+	overflow: hidden;
+	float: left;
+	width: 110px;
+	transition-duration: 500ms;
+	transition-timing-function: ease-in-out;
+	position: absolute;
+	display: block;
+}
+
+.menu_event.logo .navbar-header {
+	width: 110px;
+}
+
+@media (max-width: 767px) {
+	.menu_event .navbar-header {
+		float: none;
+		width: 100%;
+		padding: 0 0 0 11px;
+	}
+}
+
+#program ul li, #program-sl ul li {
+	width: 100%;
+	list-style: none;
+}
+#program ul li .wystapienie, #program-sl ul li .wystapienie {
+	width: auto;
+}
+
+.speakers li {
+	width: inherit !important;
+}
+
+.registration_cont {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+}

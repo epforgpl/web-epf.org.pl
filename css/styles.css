@@ -2551,7 +2551,6 @@ input[type="button"].btn-block {
 .navbar {
   position: relative;
   min-height: 100px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -2565,7 +2564,6 @@ input[type="button"].btn-block {
   }
 }
 .navbar-collapse {
-  max-height: 340px;
   overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
@@ -3275,10 +3273,10 @@ body a:hover {
   top: 0;
   right: 0;
   z-index: 1000;
-  -webkit-transition: height 0.25s ease-in-out;
-  -moz-transition: height 0.25s ease-in-out;
-  -o-transition: height 0.25s ease-in-out;
-  transition: height 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   border: none;
 }
 @media (max-width: 767px) {
@@ -3289,6 +3287,7 @@ body a:hover {
 .navbar.affix {
   min-height: 55px;
 }
+
 .navbar-container {
   position: relative;
 }
@@ -3305,16 +3304,25 @@ body a:hover {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  position: absolute;
+  top: 20px;
+  left: 15px;
 }
 @media (max-width: 767px) {
   .navbar-brand {
     height: 55px;
     line-height: 55px;
   }
-  .navbar-brand > img {
+  .navbar .navbar-brand > img {
     height: 32px;
     width: auto;
     display: inline-block;
+    top: 11px;
+    left: 15px;
+  }
+  .navbar.affix .navbar-brand > img {
+    top: 11px;
+    left: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -3325,10 +3333,14 @@ body a:hover {
     height: 55px;
     line-height: 55px;
   }
+  .navbar .navbar-brand > img {
+    top: 20px;
+    left: 18px;
+  }
   .navbar.affix .navbar-brand > img {
     height: 32px;
-    width: auto;
-    display: inline-block;
+    top: 12px;
+    left: -26px;
   }
 }
 .navbar-toggle {
@@ -4028,8 +4040,11 @@ body a:hover {
 .team-person--even {
   background-color: #009fe3;
 }
-.team-person--even > .team-person-photo {
+.team-person-photo {
   float: right;
+  background-color: #FFF;
+  background-size: cover;
+  background-position: center center;
 }
 .team-person--even > .team-person-details:before {
   border-bottom: 10px solid transparent;
@@ -4667,28 +4682,34 @@ body a:hover {
   font-weight: 300;
 }
 .container {
-  margin: 0 auto 0;
-}
-@media (max-width: 569px) {
-  .container {
-    width: 285px;
-  }
-}
-@media (min-width: 570px) and (max-width: 854px) {
-  .container {
-    width: 570px;
-  }
-}
-@media (min-width: 855px) and (max-width: 1139px) {
-  .container {
-    width: 855px;
-  }
+  margin: 0 auto;
+  width: 100%;
 }
 @media (min-width: 1140px) {
   .container {
     width: 1140px;
   }
 }
+/* === Regulations
+=================================== */
+.regulations {
+  padding-top: 100px;
+}
+@media (max-width: 767px) {
+  .regulations {
+    padding-top: 55px;
+  }
+}
+.regulations > .section-head {
+  background-image: url("https://epf.org.pl/pl/wp-content/uploads/sites/2/2014/10/policy.jpg");
+  height: 285px;
+}
+
+.regulations .section-headline {  
+  margin-top: 180px;
+  color: #00659d;
+}
+
 /* === About
 =================================== */
 .about {
@@ -4700,7 +4721,7 @@ body a:hover {
   }
 }
 .about > .section-head {
-  background-image: url("../images/bg-about.jpg");
+  background-image: url("https://epf.org.pl/pl/wp-content/uploads/sites/2/2014/10/policy.jpg");
   height: 285px;
 }
 .about > .section-headline {
@@ -4709,6 +4730,7 @@ body a:hover {
 }
 .about .section-headline {
   margin-top: 180px;
+  color: #00659d;
 }
 .about-body .row:nth-child(even) {
   background: #fff;
@@ -4798,28 +4820,9 @@ body a:hover {
   font-weight: 300;
 }
 .container {
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
-@media (max-width: 569px) {
-  .container {
-    width: 285px;
-  }
-}
-@media (min-width: 570px) and (max-width: 854px) {
-  .container {
-    width: 570px;
-  }
-}
-@media (min-width: 855px) and (max-width: 1139px) {
-  .container {
-    width: 855px;
-  }
-}
-@media (min-width: 1140px) {
-  .container {
-    width: 1140px;
-  }
-}
+
 /* === OTHERS
 =================================== */
 blockquote > p {
@@ -5321,6 +5324,11 @@ main#content {
     margin-top: 100px;
     width: 100%;
 }
+@media (max-width: 767px) {
+	main#content {
+		margin-top: 55px !important;
+	}
+}
 main#content .container{
     height: 480px;
     position:relative;
@@ -5817,34 +5825,34 @@ h1.projects-single-h a{
     padding: 0 20px;
 }
 
-#program ul{
+#program ul, #program-sl ul {
     list-style: none;
     margin:0px;
     padding:0px;
 }
-#program ul li{
+#program ul li, #program-sl ul li{
     clear:both;
     margin-bottom:20px;
     float: left;
     padding:10px 0;
 }
-#program ul li:nth-child(even){
+#program ul li:nth-child(even), #program-sl ul li:nth-child(even){
     background:#e4e4e4;
 }
-#program ul li .time{
+#program ul li .time, #program-sl ul li .time{
     width:160px;
     float:left;
      font-size: 24px;
      color: #009fe3;
 }
-#program ul li .wystapienie{
+#program ul li .wystapienie, #program-sl ul li .wystapienie{
     width:600px;
     float: left;
 }
-#program ul li .wystapienie h3{
+#program ul li .wystapienie h3, #program-sl ul li .wystapienie h3{
     margin-top:0px;
 }
-#program ul li .wystapienie p{
+#program ul li .wystapienie p, #program-sl ul li .wystapienie p{
     padding-left:0;
 }
 
@@ -5994,14 +6002,14 @@ main#content .container .event_title_div {
     margin: 0 auto;
     width: 100%!important;
 }
-#program ul li .time {
+#program ul li .time, #program-sl ul li .time {
     color: #009fe3;
     float: left;
     font-size: 24px;
     width: 100%;
     text-align: center;
 }
-#program ul li .wystapienie {
+#program ul li .wystapienie, #program-sl ul li .wystapienie {
     float: left;
     width: 100%;
     text-align: center;
@@ -6009,11 +6017,11 @@ main#content .container .event_title_div {
 .r-tabs .r-tabs-accordion-title {
     display: inline-block!important;
 }
-#program ul {
+#program ul, #program-sl ul {
     float: left;
     width: 100%;
 }
-#program ul li {
+#program ul li, #program-sl ul li {
 
     width: 100%;
 }
@@ -6193,7 +6201,6 @@ body.single .post--small {
 
 }
 .small_photo .post-categories{
-    clear:both;
 }
 .author #container{
     margin-top:40px;
@@ -6300,4 +6307,29 @@ a.pdf {
     float: left;
     margin-top: 65px;
     font-weight:bold;
+}
+
+
+
+.post-content h3 {
+	margin: 50px 0 15px;
+	font-size: 20px;
+}
+
+.post-content .lead {
+	font-size: 20px !important;
+	margin: 40px 0;
+}
+
+.post-content blockquote {
+	font-size: 18px;
+}
+
+.post-content blockquote p {
+	font-weight: normal;
+}
+
+.post-content blockquote p strong {
+	font-size: 20px;
+	line-height: 20px;
 }

@@ -1,3 +1,4 @@
+<?php require_once( 'wp-less/wp-less.php' ); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -34,8 +35,11 @@
     </title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
     <script>window.head || document.write("<script src='js/lib/head.js'>\x3C/script>");</script>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" media="screen">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/blog.css" media="screen">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css?v=10" media="screen">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/blog.css?v=2" media="screen">
+    <?php if( (get_the_ID()=='5456') || (get_the_ID()=='4793') ) {?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-event-5456.css?v=18" media="screen">
+    <?php } ?>
     <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-tabs.css" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/fav.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -51,7 +55,7 @@
 
 <body <?php body_class() ?>>
 <div class="wrap">
-    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
+    <nav class="navbar navbar-main navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
         <div class="navbar-container container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -76,15 +80,8 @@
                 ); ?>
                 <ul class="navbar-language">
                     <?php
-                    $blog_id = get_current_blog_id();
-                    if ($blog_id == 2) :?>
-                        <li>wersja polska</li>
-                        <li><a href="/en">english version</a></li>
-                    <?php endif; ?>
-                    <?php if ($blog_id == 3) : ?>
-                        <li><a href="/pl">wersja polska</a></li>
-                        <li>english version</li>
-                    <?php endif; ?>
+	                    include('_header.php');
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

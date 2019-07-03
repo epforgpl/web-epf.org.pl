@@ -8,7 +8,7 @@ Template Name: Contact
 
 <section class="contact">
 <div class="section-head">
-	<iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=21.0082,52.2286,21.0209,52.2305&layer=hot&zoom=8&marker=52.22925,21.01446"></iframe>
+	<iframe width="425" height="285" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=21.0082,52.2286,21.0209,52.2305&layer=hot&zoom=8&marker=52.22925,21.01446"></iframe>
 	<div class="container">
 		<?php the_breadcrumb(); ?>
 		<h1 class="section-headline"><?php the_title(); ?></h1>
@@ -35,6 +35,42 @@ Template Name: Contact
 				<h3>Chcesz być na bieżąco z działalnością fundacji?<br>
 				Zapisz się na newsletter!</h3>
 				<?php the_field('madmini'); ?>
+				
+				<br/>
+				
+				<div>
+					<p>Podanie adresu email oznacza wyrażenie zgody na otrzymywanie informacji handlowych w ramach newslettera od Fundacji ePaństwo. Administratorem danych osobowych jest Fundacja ePaństwo z siedzibą w Zgorzale przy ul. Pliszki 2B/1 05-500 Mysiadło. Twoje dane będą przetwarzane w celu wykonania zamówionej usługi oraz kierowania treści marketingowych w formie newslettera, w tym poprzez profilowanie.</p>
+					
+					<p>Administratorem Twoich danych osobowych jest Fundacja ePaństwo z siedzibą w Zgorzale przy ul. Pliszki 2B/1 05-500 Mysiadło. W razie wyrażenia stosownej zgody Twoje dane będą przetwarzane w celu przesyłania newslettera. <a id="newsletter-rodo-switch-on" href="#" onclick="$('#newsletter-rodo').slideDown(); $('#newsletter-rodo-switch-on').fadeOut(); return false;">Pokaż więcej informacji na temat przetwarzania danych osobowych &raquo;</a></p>
+				</div>
+				
+				
+				<div id="newsletter-rodo" style="display: none;">
+					<ol type="1">						
+						<li><p>Administratorem Twoich danych osobowych jest Fundacja ePaństwo z siedzibą w Zgorzale przy ul. Pliszki 2B/1 05-500 Mysiadło („Fundacja”)</p></li>
+						<li><p>Kontakt z Fundacją jest możliwy poprzez adres email: <a href="mailto:biuro@epf.org.pl">biuro@epf.org.pl</a> lub pisemnie na adres do doręczeń Fundacji tj. ul. Nowogrodzka 25/37 00-511 Warszawa.</p></li>
+						<li><p>Twoje dane osobowe będą przetwarzane w celu:</p>
+							<ul type="a">
+								<li><p>realizowania zamówionej usługi przesyłania newslettera – podstawą prawną przetwarzania jest wykonanie umowy (art. 6 ust. 1 lit. b ogólnego rozporządzenia o ochronie danych osobowych nr 2016/679 („RODO”));</p></li>
+								<li><p>kierowania do Ciebie treści marketingowych w formie newslettera, z wykorzystaniem profilowania – podstawą prawną jest prawnie uzasadniony interes Fundacji (art. 6 ust. 1 lit. f RODO), prawnie uzasadnionym interesem Fundacji jest kierowanie do Ciebie treści marketingowych w formie newslettera, w związku z wyrażoną przez Ciebie zgodą.</p></li>
+							</ul>
+						</li>
+						<li><p>Twoje dane osobowe mogą być przekazywane podmiotom świadczącym usługi na rzecz Fundacji takim jak: dostawcy systemów informatycznych, dostawcy usług IT, podmioty świadczące usługi prawne, podmioty świadczące usługi marketingowe.</p></li>
+						<li><p>Twoje dane osobowe będą przetwarzane przez okres:</p>
+							<ul type="a">
+								<li><p>w zakresie realizowania usługi przesyłania newslettera – do czasu wycofania zgody;</p></li>
+								<li><p>w zakresie w jakim dane przetwarzane są w celu kierowania do Ciebie treści marketingowych – do czasu wycofania zgody lub wniesienia sprzeciwu względem takiego przetwarzania.</p></li>
+							</ul>
+							<p>Okres przetwarzania może zostać każdorazowo przedłużony o okres przedawnienia roszczeń, jeżeli przetwarzanie Twoich danych osobowych będzie niezbędne dla ustalenia lub dochodzenia ewentualnych roszczeń lub obrony przed takimi roszczeniami przez Fundację.</p>
+						</li>
+						<li><p>Wyrażoną zgodę na przesyłanie newslettera można wycofać w każdym czasie. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.</p></li>
+						<li><p>Przysługuje Ci prawo dostępu do Twoich danych oraz prawo żądania ich sprostowania, ich usunięcia lub ograniczenia ich przetwarzania.</p></li>
+						<li><p>Przysługuje Ci prawo wniesienia skargi do organu nadzorczego zajmującego się ochroną danych osobowych w państwie członkowskim Twojego zwykłego pobytu, miejsca pracy lub miejsca popełnienia domniemanego naruszenia.</p></li>
+						<li><p>Przysługuje Ci ponadto prawo sprzeciwu względem przetwarzania danych osobowych w celu kierowania do Ciebie treści marketingowych, w tym względem profilowania.</p></li>
+						<li><p>Podanie danych jest dobrowolne.</p></li>
+					</ol>
+					<p><a href="#" onclick="$('#newsletter-rodo').slideUp(); $('#newsletter-rodo-switch-on').fadeIn(); return false;">&laquo; Pokaż mniej informacji</a></p>
+				</div>
 				
 				<script type="text/javascript">
 				  (function(e){function t(e){if(!e||e.nodeName!=="FORM"){return}var t,n,r=[];for(t=e.elements.length-1;t>=0;t=t-1){if(e.elements[t].name===""){continue}switch(e.elements[t].nodeName){case"INPUT":switch(e.elements[t].type){case"text":case"hidden":case"password":case"button":case"reset":case"submit":r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].value));break;case"checkbox":case"radio":if(e.elements[t].checked){r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].value))}break;case"file":break}break;case"TEXTAREA":r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].value));break;case"SELECT":switch(e.elements[t].type){case"select-one":r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].value));break;case"select-multiple":for(n=e.elements[t].options.length-1;n>=0;n=n-1){if(e.elements[t].options[n].selected){r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].options[n].value))}}break}break;case"BUTTON":switch(e.elements[t].type){case"reset":case"submit":case"button":r.push(e.elements[t].name+"="+encodeURIComponent(e.elements[t].value));break}break}}return r.join("&")}function n(e,t){for(var n in t){e[n]=t[n]}}if(!r)var r={};if(!r.Signups)r.Signups={};r.Signups.EmbedValidation=function(){this.initialize();if(document.addEventListener){this.form.addEventListener("submit",this.onFormSubmit.bind(this))}else{this.form.attachEvent("onsubmit",this.onFormSubmit.bind(this))}};n(r.Signups.EmbedValidation.prototype,{initialize:function(){this.form=document.getElementById("mad_mimi_signup_form");this.submit=document.getElementById("webform_submit_button");this.callbackName="jsonp_callback_"+Math.round(1e5*Math.random())},onFormSubmit:function(e){e.preventDefault();this.validate();if(this.isValid){this.submitForm()}else{this.revalidateOnChange()}},validate:function(){this.isValid=true;this.emailValidation();this.fieldAndListValidation();this.updateFormAfterValidation()},emailValidation:function(){var e=document.getElementById("signup_email"),t=/.+@.+\..+/;if(!t.test(e.value)){this.textFieldError(e);this.isValid=false}else{this.removeTextFieldError(e)}},fieldAndListValidation:function(){var e=this.form.querySelectorAll(".mimi_field.required");for(var t=0;t<e.length;++t){var n=e[t],r=this.fieldType(n);if(r=="checkboxes"||r=="radio_buttons"){this.checkboxAndRadioValidation(n)}else{this.textAndDropdownValidation(n,r)}}},fieldType:function(e){var t=e.querySelectorAll(".field_type");if(t.length>0){return t[0].getAttribute("data-field-type")}else if(e.className.indexOf("checkgroup")>=0){return"checkboxes"}else{return"text_field"}},checkboxAndRadioValidation:function(e){var t=e.getElementsByTagName("input"),n=false;for(var r=0;r<t.length;++r){var i=t[r];if((i.type=="checkbox"||i.type=="radio")&&i.checked)n=true}if(n){e.className=e.className.replace(/ invalid/g,"")}else{if(e.className.indexOf("invalid")==-1)e.className+=" invalid";this.isValid=false}},textAndDropdownValidation:function(e,t){var n=e.getElementsByTagName("input");for(var r=0;r<n.length;++r){var i=n[r];if(i.name.indexOf("signup")>=0){if(t=="text_field"){this.textValidation(i)}else{this.dropdownValidation(e,i)}}}this.htmlEmbedDropdownValidation(e)},textValidation:function(e){if(e.id=="signup_email")return;var t=e.value;if(t==""){this.textFieldError(e);this.isValid=false}else{this.removeTextFieldError(e)}},dropdownValidation:function(e,t){var n=t.value;if(n==""){if(e.className.indexOf("invalid")==-1)e.className+=" invalid";this.onSelectCallback(t);this.isValid=false}else{e.className=e.className.replace(/ invalid/g,"")}},htmlEmbedDropdownValidation:function(e){var t=e.querySelectorAll(".mimi_html_dropdown");for(var n=0;n<t.length;++n){var r=t[n],i=r.value;if(i==""){if(e.className.indexOf("invalid")==-1)e.className+=" invalid";this.isValid=false;r.onchange=this.validate.bind(this)}else{e.className=e.className.replace(/ invalid/g,"")}}},textFieldError:function(e){e.className="required invalid";e.placeholder=e.getAttribute("data-required-field")},removeTextFieldError:function(e){e.className="required";e.placeholder=""},onSelectCallback:function(e){if(typeof Widget=="undefined"||Widget.BasicDropdown==undefined)return;var t=e.parentNode,n=Widget.BasicDropdown.instances;for(var r=0;r<n.length;++r){var i=n[r];if(i.wrapperEl==t){i.onSelect=this.validate.bind(this)}}},updateFormAfterValidation:function(){this.form.className=this.setFormClassName();this.submit.value=this.submitButtonText();this.submit.disabled=!this.isValid;this.submit.className=this.isValid?"submit":"disabled"},setFormClassName:function(){var e=this.form.className;if(this.isValid){return e.replace(/\s?mimi_invalid/,"")}else{if(e.indexOf("mimi_invalid")==-1){return e+=" mimi_invalid"}else{return e}}},submitButtonText:function(){var e=document.querySelectorAll(".invalid"),t;if(this.isValid||e==undefined){t=this.submit.getAttribute("data-default-text")}else{if(e.length>1||e[0].className.indexOf("checkgroup")==-1){t=this.submit.getAttribute("data-invalid-text")}else{t=this.submit.getAttribute("data-choose-list")}}return t},submitForm:function(){this.formSubmitting();var e=this;window[this.callbackName]=function(n){delete window[this.callbackName];document.body.removeChild(t);e.onSubmitCallback(n)};var t=document.createElement("script");t.src=this.formUrl("json");document.body.appendChild(t)},formUrl:function(e){var n=this.form.action,r=n.indexOf("?")>=0?"&":"?";if(e=="json")n+=".json";return n+r+"callback="+this.callbackName+"&"+t(this.form)},formSubmitting:function(){this.form.className+=" mimi_submitting";this.submit.value=this.submit.getAttribute("data-submitting-text");this.submit.disabled=true;this.submit.className="disabled"},onSubmitCallback:function(e){if(e.success){this.onSubmitSuccess(e.result)}else{top.location.href=this.formUrl("html")}},onSubmitSuccess:function(e){if(e.has_redirect){top.location.href=e.redirect}else if(e.single_opt_in||e.confirmation_html==null){this.disableForm();this.updateSubmitButtonText(this.submit.getAttribute("data-thanks"))}else{this.showConfirmationText(e.confirmation_html)}},showConfirmationText:function(e){var t=this.form.querySelectorAll(".mimi_field");for(var n=0;n<t.length;++n){t[n].style["display"]="none"}(this.form.querySelectorAll("fieldset")[0]||this.form).innerHTML=e},disableForm:function(){var e=this.form.elements;for(var t=0;t<e.length;++t){e[t].disabled=true}},updateSubmitButtonText:function(e){this.submit.value=e},revalidateOnChange:function(){var e=this.form.querySelectorAll(".mimi_field.required");for(var t=0;t<e.length;++t){var n=e[t].getElementsByTagName("input");for(var r=0;r<n.length;++r){n[r].onchange=this.validate.bind(this)}}}});if(document.addEventListener){document.addEventListener("DOMContentLoaded",new r.Signups.EmbedValidation)}else{window.attachEvent("onload",function(){new r.Signups.EmbedValidation})}})(this)
@@ -448,9 +484,38 @@ Template Name: Contact
 		<div class="container">
 			<div class="col-md-12">
 				<h3>Popierasz pracę Fundacji? Chcesz nam pomóc?<br>
-				Możesz wesprzeć naszą działalność dotacją.</h3>
+				Możesz wesprzeć naszą działalność darowizną.</h3>
 				<p>Numer konta: <br>
 				<?php the_field('konto'); ?> </p>
+				
+				<div>
+				<p>Administratorem Twoich danych osobowych jest Fundacja ePaństwo z siedzibą w Zgorzale przy ul. Pliszki 2B/1 05-500 Mysiadło.
+W przypadku dokonania darowizny na rzecz Fundacji ePaństwo Twoje dane będą przetwarzane w celu wykonania umowy darowizny, wypełnienia obowiązków prawnych ciążących na Fundacji, a także w celach sprawozdawczych Fundacji. <a id="donors-rodo-switch-on" href="#" onclick="$('#donors-rodo').slideDown(); $('#donors-rodo-switch-on').fadeOut(); return false;">Pokaż więcej informacji na temat przetwarzania danych osobowych &raquo;</a></p>
+				</div>
+				
+				<div id="donors-rodo" style="display: none;">
+					<ol>
+						<li><p>Administratorem Twoich danych osobowych jest Fundacja ePaństwo z siedzibą w Zgorzale przy ul. Pliszki 2B/1 05-500 Mysiadło („Fundacja”).</p></li>
+						<li><p>Kontakt z Fundacją jest możliwy poprzez adres e-mail: biuro@epf.org.pl lub pisemnie na adres: Nowogrodzka 25/37, 00-511 Warszawa.</p></li>
+						<li><p>Twoje dane osobowe będą przetwarzane:</p>
+							<ul type="a">
+								<li><p>w celu wykonania umowy darowizny – podstawą prawną przetwarzania jest niezbędność przetwarzania do wykonania umowy (art. 6 ust. 1 lit. b ogólnego rozporządzenia o ochronie danych osobowych nr 2016/679 („RODO”));</p></li>
+								<li><p>dla celów wypełnienia obowiązków prawnych ciążących na Fundacji na podstawie powszechnie obowiązujących przepisów prawa, w tym w szczególności przepisów z zakresu rachunkowości i prawa podatkowego –  podstawą prawną przetwarzania jest wypełnienie obowiązku prawnego ciążącego na Fundacji  (art. 6 ust. 1 lit. c RODO);</p></li>
+								<li><p>w celu ewentualnego ustalenia lub dochodzenia roszczeń lub obrony przed roszczeniami – podstawą prawną przetwarzania jest prawnie uzasadniony interes Fundacji (art. 6 ust. 1 lit. f RODO); prawnie uzasadniony interes polega na umożliwieniu Fundacji dochodzenia lub obrony przed roszczeniami.</p></li>
+							</ul>
+						</li>
+						<li><p>Twoje dane osobowe mogą być przekazywane dostawcom systemów informatycznych i usług IT, podmiotom świadczącym usługi księgowe, podmiotom dotującym, kancelariom prawnym oraz innym podmiotom świadczącym usługi na rzecz Fundacji.</p></li>
+						<li><p>Twoje dane osobowe będą przetwarzane w zakresie wykonania umowy – przez okres jej wykonywania. Okres przetwarzania może zostać każdorazowo przedłużony o okres przedawnienia roszczeń jeżeli przetwarzanie danych osobowych będzie niezbędne dla dochodzenia ewentualnych roszczeń lub obrony przed takimi roszczeniami przez Fundację. Po tym okresie Twoje dane osobowe będą przetwarzane jedynie w zakresie i przez okres wynikający z przepisów prawa, w szczególności przepisów o rachunkowości.</p>
+						</li>						
+						<li><p>Przysługuje Ci prawo: dostępu do treści danych oraz żądania ich sprostowania, usunięcia lub ograniczenia przetwarzania.</p></li>
+						<li><p>Przysługuje Ci prawo wniesienia skargi do organu nadzorczego zajmującego się ochroną danych osobowych w państwie członkowskim Twojego zwykłego pobytu, miejsca pracy lub miejsca popełnienia domniemanego naruszenia.</p></li>
+						<li><p>Przysługuje Ci także prawo wniesienia sprzeciwu względem przetwarzania danych osobowych opartego na podstawie wskazanej w pkt 3c) z przyczyn związanych z Twoją szczególną sytuacją.</p></li>
+						<li><p>Podanie danych jest wymagane przez Fundację w celu realizacji umowy. Brak podania danych osobowych będzie skutkować niemożliwością wykonania tej czynności.</p></li>
+					</ol>
+				</div>
+
+
+
 			</div>
 		</div>
 	</div>

@@ -22,9 +22,7 @@ if( have_rows('persons') ):
 	while ( have_rows('persons') ) : the_row();
 		if($i==0 || $i==1 ) $class = 'odd'; else $class = 'even'; ?>
 		<article class="team-person team-person--<?php echo $class; ?>">
-		<figure class="team-person-photo">
-		<img id="team-<?php trim(the_sub_field('name')); ?>" src="<?php the_sub_field('photo'); ?>" width="285" height="3705" alt="<?php the_sub_field('name'); ?> <?php the_sub_field('surname'); ?>">
-		</figure>
+		<figure class="team-person-photo" style="background-image: url(<?php the_sub_field('photo'); ?>)"></figure>
 		<div class="team-person-details">
 		<h1 class="team-person-name"><?php the_sub_field('name'); ?><br>
 		<?php the_sub_field('surname'); ?></h1>

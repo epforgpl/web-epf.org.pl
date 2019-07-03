@@ -28,7 +28,7 @@
 	</title>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
 	<script>window.head || document.write("<script src='js/lib/head.js'>\x3C/script>");</script>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css?ver=2" media="screen">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css?ver=7" media="screen">
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/fav.ico" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">
@@ -36,10 +36,10 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/ie/respond.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+	<meta name="gravityscan-site-verification" content="fbd9055305ea44b29803b2ab4dfa3bd4047ee259f726d8f9eff753d61dcb1a7a"/>
 </head>
 
 <body <?php body_class()?>>
-<script type="text/javascript" src="https://blackout.mojepanstwo.pl/blackout.js"></script>
 <div class="wrap">
 	<nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="45">
 	<div class="navbar-container container">
@@ -65,15 +65,8 @@
 			); ?>
 			<ul class="navbar-language">
 				<?php
-				$blog_id = get_current_blog_id();
-				 if($blog_id==2) :?>
-					<li>wersja polska</li>
-					<li><a href="/en">english version</a></li>
-				<?php endif; ?>
-				<?php if($blog_id==3) :?>
-					<li><a href="/pl">wersja polska</a></li>
-					<li>english version</li>
-				<?php endif; ?>
+                    include('_header.php');
+                ?>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

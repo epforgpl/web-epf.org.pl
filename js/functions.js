@@ -67,7 +67,7 @@ function initLayout(){
 
 var ePF = {
   init: function(){
-      this.teamMembers();
+      // this.teamMembers();
   },
   teamMembers: function () {
       var epfTeam = [],
