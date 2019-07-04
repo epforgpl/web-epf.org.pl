@@ -65,7 +65,7 @@
 			); ?>
 			<ul class="navbar-language">
 				<?php
-                    include('_header.php');
+                    // include('_header.php');
                 ?>
 			</ul>
 		</div>
